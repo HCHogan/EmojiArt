@@ -10,9 +10,26 @@ import SwiftUI
 class EmojiArtDocument: ObservableObject {
     static let palette: String = "😋😇😔🤩😭🥵"
     
-    @Published private var emojiArt:EmojiArt = EmojiArt()
+    @Published private var emojiArt:EmojiArt = EmojiArt() {
+//        willSet {
+//            objectWillChange.send()
+//        }
+        didSet {
+            print("json = \(emojiArt.json?.utf8 ?? "nil")")
+            UserDefaults.standard.set(emojiArt.json, forKey: "EmojiArtDocument.Untitled")
+        }
+    }
+    
+    private static let untitled = "EmojiArtDocument.Untitled"
+    
+    init() {
+        emojiArt = EmojiArt(json: UserDefaults.standard.data(forKey: EmojiArtDocument.untitled)) ?? EmojiArt()
+        fetchBackgroundImageData()
+    }
     
     @Published private(set) var backgroundImage: UIImage?
+    
+    var emojis: [EmojiArt.Emoji] { emojiArt.emojis }
     
     // MARK: Intents
     
@@ -44,10 +61,17 @@ class EmojiArtDocument: ObservableObject {
             DispatchQueue.global(qos: .userInitiated).async {
                 if let imageData = try? Data(contentsOf: url) {
                     DispatchQueue.main.async {
-                        self.backgroundImage = UIImage(data: imageData)
+                        if url == self.emojiArt.backgroundURL {
+                            self.backgroundImage = UIImage(data: imageData)
+                        }
                     }
                 }
             }
         }
     }
+}
+
+extension EmojiArt.Emoji {
+    var fontsize: CGFloat { CGFloat(self.size) }
+    var location: CGPoint { CGPoint(x: CGFloat(x), y: CGFloat(y)) }
 }
