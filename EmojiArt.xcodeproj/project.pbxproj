@@ -19,6 +19,7 @@
 		36AC4FB72989116300E0AE77 /* EmojiArtExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AC4FB62989116300E0AE77 /* EmojiArtExtensions.swift */; };
 		36AC4FB9298A993700E0AE77 /* OptionalImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AC4FB8298A993700E0AE77 /* OptionalImage.swift */; };
 		36AC4FBB298A9DD500E0AE77 /* AnimatableSystemFontModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AC4FBA298A9DD500E0AE77 /* AnimatableSystemFontModifier.swift */; };
+		36AC4FBD298E552300E0AE77 /* Spinning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AC4FBC298E552300E0AE77 /* Spinning.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		36AC4FB62989116300E0AE77 /* EmojiArtExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiArtExtensions.swift; sourceTree = "<group>"; };
 		36AC4FB8298A993700E0AE77 /* OptionalImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalImage.swift; sourceTree = "<group>"; };
 		36AC4FBA298A9DD500E0AE77 /* AnimatableSystemFontModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatableSystemFontModifier.swift; sourceTree = "<group>"; };
+		36AC4FBC298E552300E0AE77 /* Spinning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinning.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			children = (
 				36AC4F882988FEF700E0AE77 /* EmojiArtApp.swift */,
 				36AC4F8A2988FEF700E0AE77 /* EmojiArtDocumentView.swift */,
+				36AC4FBC298E552300E0AE77 /* Spinning.swift */,
 				36AC4FB8298A993700E0AE77 /* OptionalImage.swift */,
 				36AC4FBA298A9DD500E0AE77 /* AnimatableSystemFontModifier.swift */,
 				36AC4FB42989080D00E0AE77 /* EmojiArt.swift */,
@@ -279,6 +282,7 @@
 				36AC4FB9298A993700E0AE77 /* OptionalImage.swift in Sources */,
 				36AC4FB32988FF4400E0AE77 /* EmojiArtDocument.swift in Sources */,
 				36AC4F892988FEF700E0AE77 /* EmojiArtApp.swift in Sources */,
+				36AC4FBD298E552300E0AE77 /* Spinning.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
